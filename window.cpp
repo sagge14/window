@@ -51,7 +51,7 @@ void Window::setY(int H) {
         }
         cin>>y;
     }
-    while(!cin  || (yY + y > H - xL || yY + y < 0));
+    while(!cin  || (yY + y > H - yH || yY + y < 0));
     yY += y;
     cout << "-ok" << endl;
 
@@ -80,7 +80,7 @@ void Window::setXL(int L) {
 
 void Window::setYH(int H) {
     int YH = 0;
-    cout << "Enter YL:";
+    cout << "Enter YH:";
     do
     {
         if(!cin || (YH + yY > H || YH < 0))
@@ -88,13 +88,13 @@ void Window::setYH(int H) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(),'\n');
             cout<<"-----------------------------------------\n";
-            cout<<"Wrong YL!";
+            cout<<"Wrong YH!";
             cout<<"\n-----------------------------------------\n";
-            cout<<"Repeat enter YL:";
+            cout<<"Repeat enter YH:";
         }
         cin>>YH;
     }
-    while(!cin  || (YH + xX > H || YH < 0));
+    while(!cin  || (YH + yY > H || YH < 0));
     yH = YH;
     cout << "-ok" << endl;
 }
@@ -126,4 +126,11 @@ int Monitor::getLenght() const {
 
 int Monitor::getHight() const {
     return H;
+}
+void showMenu()
+{
+cout<<"Valid command format: 1 'resize' for resize a window;" << endl;
+cout<<"                      2 'display' for display a window in the monitor;" << endl;
+cout<<"                      3 'move' for move a window in the monitor;" << endl;
+cout<<"                      4 'exit' for exit." << endl;
 }

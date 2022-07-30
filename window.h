@@ -3,8 +3,7 @@
 //
 #include <string>
 #include <iostream>
-#ifndef WINDOW_WINDOW_H
-#define WINDOW_WINDOW_H
+#pragma once
 class Monitor;
 class Window{
     int xX = 0;
@@ -30,4 +29,5 @@ public:
     int getLenght() const;
     int getHight() const;
 };
-#endif //WINDOW_WINDOW_H
+void showMenu();
+
