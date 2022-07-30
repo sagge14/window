@@ -23,6 +23,5 @@ int main() {
     }
  cout << "---Bye, bye!---" << endl;
 
-
     return 0;
 }
