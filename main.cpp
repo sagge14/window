@@ -22,6 +22,7 @@ int main() {
             cout << "Error! Unknown command!" << endl;
     }
  cout << "---Bye, bye!---" << endl;
+    cout << "---Github is there---" << endl;
 
     return 0;
 }
