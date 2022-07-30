@@ -8,7 +8,7 @@ int main() {
 
     while(true)
     {
-        void showMenu();
+        showMenu();
         cout<<"Enter the command:";
         cin>>command;
         if(command == "move")
