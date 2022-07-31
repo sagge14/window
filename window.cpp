@@ -99,13 +99,13 @@ void Window::setYH(int H) {
     cout << "-ok" << endl;
 }
 
-void Window::move(Monitor& M) {
+void Window::move(const Monitor& M) {
     cout << "---Enter vector coordinates---" << endl;
     setX(M.getLenght());
     setY(M.getHight());
 }
 
-void Window::resize(Monitor& M) {
+void Window::resize(const Monitor& M) {
     cout << "---Resize window---" << endl;
     setXL(M.getLenght());
     setYH(M.getHight());

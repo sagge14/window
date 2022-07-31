@@ -15,15 +15,15 @@ class Window{
     void setXL(int L);
     void setYH(int H);
 public:
-    void move(Monitor& M);
-    void resize(Monitor& M);
+    void move(const Monitor& M);
+    void resize(const Monitor& M);
 
     std::string isWindow(int x, int y) const;
 
 };
 class Monitor{
-    int L = 8;//80 and 50 too much
-    int H = 5;//80 and 50 too much
+    int L = 80;//80 and 50 too much
+    int H = 50;//80 and 50 too much
 public:
     void showWindow(const Window& W) const;
     int getLenght() const;
